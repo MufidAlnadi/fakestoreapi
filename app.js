@@ -23,14 +23,14 @@ function render() {
   const main = document.getElementById("main"); 
    let card = products.map((product) =>
             `
-            <div class="card" style="width: 18rem;">
+            <div class="card m-5" style="width: 18rem;">
             <div class="card-header">
-            <img src="${product.image}" class="card-img-top" alt="${product.title}">
+            <img src="${product.image}" class="card-img-top product-image" alt="${product.title}">
             </div>
             <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>Product: </b> ${product.title}</li>
-            <li class="list-group-item"><b>Description:</b> ${product.description}</li>
-            <li class="list-group-item"><b>Price: </b> ${product.price}</li>
+            <li class="list-group-item product-title"><b>Product: </b> ${product.title}</li>
+            <li class="list-group-item product-description"><b>Description:</b> ${product.description}</li>
+            <li class="list-group-item product-price"><b>Price: </b> ${product.price}</li>
             </ul>
             </div>`).join('');
             main.innerHTML= card;
